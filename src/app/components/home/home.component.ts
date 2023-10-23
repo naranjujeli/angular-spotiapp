@@ -19,9 +19,15 @@ export class HomeComponent implements OnInit {
   //     console.log(dataReceived);
   //   })
   // }
+
+  albums: any;
   
   constructor(private spotify: SpotifyService) {
-    this.spotify.getNewReleases();
+    this.spotify.getNewReleases()
+      .subscribe( (data: any) => {
+        console.log(data);
+        this.albums = data.albums.items;
+      });
   }
 
   ngOnInit() {

@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     SearchComponent,
     CardsComponent,
     NoImagePipe,
-    LoadingComponent
+    LoadingComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

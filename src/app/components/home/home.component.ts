@@ -20,13 +20,19 @@ export class HomeComponent implements OnInit {
   //   })
   // }
 
+  loading: boolean;
   albums: any;
   
   constructor(private spotify: SpotifyService) {
+    this.loading = true;
+
     this.spotify.getNewReleases()
       .subscribe( (data: any) => {
         this.albums = data;
-      });
+        this.loading = false;
+      }
+    );
+
   }
 
   ngOnInit() {

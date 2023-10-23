@@ -6,13 +6,17 @@
     </li>
 </ul> -->
 
-<div class="row">
+<div class="row">   
     <div *ngFor="let album of albums" class="card col-4 g-2">
         <img [src]="album.images[1].url" class="card-img-top" alt="coso">
         <div class="card-body">
             <h5 class="card-title">{{ album.name }}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <!-- <ul class="card-text">
+                <li *ngFor="let artist of album.artists">
+                    {{ artist.name }}
+                </li>
+            </ul> -->
+            <span *ngFor="let artist of album.artists" class="badge text-bg-secondary">{{ artist.name }}</span>
         </div>
     </div>
 </div>

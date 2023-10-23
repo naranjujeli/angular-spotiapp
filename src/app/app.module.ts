@@ -13,6 +13,7 @@ import { SpotifyService } from './services/spotify.service';
 
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routes';
+import { NoImagePipe } from './pipes/no-image.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { APP_ROUTES } from './app.routes';
     HomeComponent,
     ArtistComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    NoImagePipe
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 import { SpotifyService } from './services/spotify.service';
 
@@ -22,6 +23,7 @@ import { NoImagePipe } from './pipes/no-image.pipe';
     ArtistComponent,
     NavbarComponent,
     SearchComponent,
+    CardsComponent,
     NoImagePipe
   ],
   imports: [
